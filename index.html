@@ -24,16 +24,34 @@
     </style>
   </head>
   <body>
-    <main class="flex flex-col bg-gradient-to-br from-[#F9FAFB] to-[#D2D6DB] h-screen px-4 pt-4">
-      <div class="flex flex-col justify-center h-20">
-        <nav class="flex justify-between items-center">
+    <main class="flex flex-col bg-gradient-to-br from-[#F9FAFB] to-[#D2D6DB] h-screen p-4">
+        <nav class="flex flex-col justify-between h-full gap-y-6">
+          <div class="flex justify-between items-center h-20 border-2 border-green-600">
             <img src="./img/abstractly.svg" alt="abstractly logo" />
-            <button id="menu-button"><img id="menu-icon" src="./img/menu-line.svg" alt="hamburger-menu-icon" class="h-5 w-5 text-neutral-600 gap-8"/></button>
+            <button id="menu-button">
+              <img id="menu-icon" src="./img/menu-line.svg" alt="hamburger-menu-icon" class="h-5 w-5 text-neutral-600 gap-8"/>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"></path>
+              </svg>
+            </button>
+          </div>
+          <ul class="border-2 border-indigo-600 flex flex-col flex-1 space-y-2">
+            <li class="gap-3 px-3 py-2 rounded"><a class="inline-block">Home</a></li>
+            <li class="gap-3 px-3 py-2 rounded"><a class="inline-block">Features</a></li>
+            <li class="gap-3 px-3 py-2 rounded"><a class="inline-block">Pricing</a></li>
+            <li class="gap-3 px-3 py-2 rounded"><a class="inline-block">About us</a></li>
+            <li class="gap-3 px-3 py-2 rounded"><a class="inline-block">Contact</a></li>
+          </ul>
+          <div class="flex flex-col gap-4 border-2 border-amber-600">
+            <button class="gap-1.5 px-4 py-2.5 border-0.5 border-neutral-200 bg-white shadow">
+              Learn more
+            </button>
+            <button class="gap-1.5 px-4 py-2.5 rounded bg-indigo-700 text-white">
+              Try it out
+            </button>
+          </div>
         </nav>
-      </div>
       
-    
-
       <!-- Attribute this challenge to yourself! -->
       <div class="credits" data-gfe-screenshot-exclude="true">
         A challenge by
