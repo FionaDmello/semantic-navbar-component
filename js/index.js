@@ -6,7 +6,6 @@ const navLinksContainer = document.getElementById("nav-links-container")
 const buttonContainer = document.getElementById("button-container")
 
 menuButton.addEventListener("click", () => {
-  console.log("what happened?")
   navLinksContainer.classList.remove("hidden")
   buttonContainer.classList.remove("hidden")
   closeButton.classList.remove("hidden")
@@ -18,4 +17,10 @@ closeButton.addEventListener("click", () => {
   buttonContainer.classList.add("hidden")
   closeButton.classList.add("hidden")
   menuButton.classList.remove("hidden")
+})
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 1280) {
+    console.log("I need to show all content")
+  }
 })
