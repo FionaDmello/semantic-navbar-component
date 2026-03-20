@@ -21,6 +21,9 @@ closeButton.addEventListener("click", () => {
 
 window.addEventListener("resize", () => {
   if (window.innerWidth >= 1280) {
-    console.log("I need to show all content")
+    navLinksContainer.classList.remove("hidden")
+    buttonContainer.classList.remove("hidden")
+    closeButton.classList.add("hidden")
+    menuButton.classList.add("hidden")
   }
 })
