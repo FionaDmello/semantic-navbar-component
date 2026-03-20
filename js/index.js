@@ -5,6 +5,8 @@ const closeButton = document.getElementById("close-button")
 const navLinksContainer = document.getElementById("nav-links-container")
 const buttonContainer = document.getElementById("button-container")
 
+let previousWidth = window.innerWidth;
+
 if (window.innerWidth >= 1280) {
   navLinksContainer.classList.remove("hidden")
   buttonContainer.classList.remove("hidden")
@@ -17,6 +19,20 @@ else {
   closeButton.classList.add("hidden")
   menuButton.classList.remove("hidden")
 }
+
+window.addEventListener("resize", () => {
+  const currentWidth = window.innerWidth;
+  if (currentWidth >= 1280) {
+    navLinksContainer.classList.remove("hidden")
+    buttonContainer.classList.remove("hidden")
+    closeButton.classList.add("hidden")
+    menuButton.classList.add("hidden")
+  } else {
+    if(previousWidth - currentWidth === 1)
+    closeButton.classList.remove("hidden")
+  }
+  previousWidth = currentWidth
+})
 
 menuButton.addEventListener("click", () => {
   navLinksContainer.classList.remove("hidden")
@@ -32,14 +48,4 @@ closeButton.addEventListener("click", () => {
   menuButton.classList.remove("hidden")
 })
 
-window.addEventListener("resize", () => {
-  if (window.innerWidth >= 1280) {
-    navLinksContainer.classList.remove("hidden")
-    buttonContainer.classList.remove("hidden")
-    closeButton.classList.add("hidden")
-    menuButton.classList.add("hidden")
-  } else {
-    if(!menuButton.classList.includes("hidden"))
-    closeButton.classList.remove("hidden")
-  }
-})
+
