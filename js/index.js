@@ -26,9 +26,6 @@ window.addEventListener("resize", () => {
     closeButton.classList.add("hidden")
     menuButton.classList.add("hidden")
   } else {
-    navLinksContainer.classList.add("hidden")
-    buttonContainer.classList.add("hidden")
-    closeButton.classList.add("hidden")
-    menuButton.classList.remove("hidden")
+    closeButton.classList.remove("hidden")
   }
 })
