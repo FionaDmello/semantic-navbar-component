@@ -15,7 +15,7 @@ menuButton.addEventListener("click", () => {
 
 closeButton.addEventListener("click", () => {
   navLinksContainer.classList.add("hidden")
-  navLinksContainer.classList.add("hidden")
+  buttonContainer.classList.add("hidden")
   closeButton.classList.add("hidden")
   menuButton.classList.remove("hidden")
 })
