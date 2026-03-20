@@ -8,7 +8,7 @@ const buttonContainer = document.getElementById("button-container")
 menuButton.addEventListener("click", () => {
   console.log("what happened?")
   navLinksContainer.classList.remove("hidden")
-  navLinksContainer.classList.remove("hidden")
+  buttonContainer.classList.remove("hidden")
   closeButton.classList.remove("hidden")
   menuButton.classList.add("hidden")
 }) 
