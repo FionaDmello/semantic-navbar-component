@@ -26,6 +26,7 @@ window.addEventListener("resize", () => {
     buttonContainer.classList.remove("hidden")
     closeButton.classList.add("hidden")
     menuButton.classList.add("hidden")
+    firstResize = true
   } else if (currentWidth <= 1279 && firstResize) {
       console.log("here")
       closeButton.classList.remove("hidden")
