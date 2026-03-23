@@ -18,7 +18,7 @@ else {
   menuButton.classList.remove("hidden")
 }
 
-let firstResize = true;
+let firstResizeBelowDesktop = true;
 window.addEventListener("resize", () => {
   const currentWidth = window.innerWidth;
   if (currentWidth >= 1280) {
@@ -26,13 +26,11 @@ window.addEventListener("resize", () => {
     buttonContainer.classList.remove("hidden")
     closeButton.classList.add("hidden")
     menuButton.classList.add("hidden")
-    firstResize = true
+    firstResizeBelowDesktop = true
   } else if (currentWidth <= 1279 && firstResize) {
-      console.log("here")
       closeButton.classList.remove("hidden")
-      firstResize = false;
+      firstResizeBelowDesktop = false;
   }
- 
 })
 
 menuButton.addEventListener("click", () => {
