@@ -5,8 +5,6 @@ const closeButton = document.getElementById("close-button")
 const navLinksContainer = document.getElementById("nav-links-container")
 const buttonContainer = document.getElementById("button-container")
 
-let previousWidth = window.innerWidth;
-
 if (window.innerWidth >= 1280) {
   navLinksContainer.classList.remove("hidden")
   buttonContainer.classList.remove("hidden")
@@ -27,11 +25,11 @@ window.addEventListener("resize", () => {
     buttonContainer.classList.remove("hidden")
     closeButton.classList.add("hidden")
     menuButton.classList.add("hidden")
-  } else {
-    if(previousWidth - currentWidth === 1)
-    closeButton.classList.remove("hidden")
+  } else if (currentWidth === 1279) {
+      console.log("here")
+      closeButton.classList.remove("hidden")
   }
-  previousWidth = currentWidth
+ 
 })
 
 menuButton.addEventListener("click", () => {
