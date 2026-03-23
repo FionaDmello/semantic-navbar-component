@@ -27,7 +27,7 @@ window.addEventListener("resize", () => {
     closeButton.classList.add("hidden")
     menuButton.classList.add("hidden")
     firstResizeBelowDesktop = true
-  } else if (currentWidth <= 1279 && firstResize) {
+  } else if (currentWidth <= 1279 && firstResizeBelowDesktop) {
       closeButton.classList.remove("hidden")
       firstResizeBelowDesktop = false;
   }
